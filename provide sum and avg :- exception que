@@ -1,0 +1,57 @@
+/*
+Write a class expdemo which accepts 5 integers through command line.
+Create an array using these parameters. Loop through the array and obtain the sum
+and average of all the elements and display the result.
+Various exceptions that may arise like ArithmeticException, NumberFormatException,
+and so on should be handled.
+*/
+
+
+import java.util.Scanner;
+
+class expdemo
+{
+	void func1()
+	{
+		try
+        	{
+			int ar[] = new int[5];
+            		Scanner Sc = new Scanner(System.in);
+            		System.out.println("enter elements");
+            		for(int i=0;i<5;i++)
+            		{
+                		ar[i] =Sc.nextInt();
+            		}
+            		System.out.println("array elements");
+            		for(int i=0;i<5;i++)
+            		{
+                		System.out.println(ar[i]);
+            		}
+            		int sum=0;
+                	for(int i=0;i<5;i++)
+                	{
+				sum=sum+ar[i];
+                    		System.out.println("sum"+sum);
+                	}
+                	int avg = sum/5;
+                	System.out.println("avg"+avg);
+            	}
+		catch(Exception e)	
+		{
+			System.out.println("error occured");
+        	}
+	}
+        void func2()
+        {
+       
+            System.out.println("hello");
+        }
+        public static void main(String args[])
+        {
+           expdemo obj = new expdemo();
+           obj.func1();
+           obj.func2();
+          
+        }
+}
+
